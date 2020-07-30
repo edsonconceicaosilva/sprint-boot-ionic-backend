@@ -1,5 +1,6 @@
 package com.edsonconceicao.cursomc.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +43,10 @@ public class CategoriaServices {
 			throw new DataIntegrityException("Não é possível excluir categoria que tem produtos atrelados");
 	
 		}
+	}
+	
+	public List<Categoria> findAll(){
+		return repo.findAll();
 	}
 	
 }
